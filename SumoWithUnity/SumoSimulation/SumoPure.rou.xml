@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+ 
+    <trip id="0" depart="0.00" from="E" to="E"/>
+    
+    <trip id="veh_1" depart="10.00" from="W" to="W"/>
+    <trip id="veh_2" depart="10.00" from="W" to="W"/>
+...
+</routes>

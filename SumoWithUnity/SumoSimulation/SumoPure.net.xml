@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 01/16/23 14:45:52 by Eclipse SUMO netedit Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="SumoPure.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="SumoPure.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="true"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.6" junctionCornerDetail="5" rectangularLaneCut="true" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="99.85,3.09" convBoundary="0.00,0.00,281.63,2.81" origBoundary="-99.85,-3.09,181.78,-0.28" projParameter="!"/>
+
+    <type id="bidirectional" priority="1" speed="1.39" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" width="3.65"/>
+    <type id="border" priority="0" speed="1.39" disallow="all" discard="0" width="0.10"/>
+    <type id="driving" priority="1" speed="13.89" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" width="3.65"/>
+    <type id="entry" priority="1" speed="22.22" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" width="3.65"/>
+    <type id="exit" priority="1" speed="22.22" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" width="3.65"/>
+    <type id="median" priority="0" speed="1.39" disallow="all" discard="0" width="0.10"/>
+    <type id="mwyEntry" priority="1" speed="22.22" allow="private emergency authority army vip passenger hov taxi bus coach delivery truck trailer motorcycle evehicle custom1 custom2" width="3.65"/>
+    <type id="mwyExit" priority="1" speed="22.22" allow="private emergency authority army vip passenger hov taxi bus coach delivery truck trailer motorcycle evehicle custom1 custom2" width="3.65"/>
+    <type id="none" priority="0" speed="1.39" disallow="all" discard="0" width="1.00"/>
+    <type id="offRamp" priority="1" speed="22.22" allow="private emergency authority army vip passenger hov taxi bus coach delivery truck trailer motorcycle evehicle custom1 custom2" width="3.65"/>
+    <type id="onRamp" priority="1" speed="22.22" allow="private emergency authority army vip passenger hov taxi bus coach delivery truck trailer motorcycle evehicle custom1 custom2" width="3.65"/>
+    <type id="parking" priority="1" speed="1.39" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" width="2.50"/>
+    <type id="rail" priority="3" speed="33.33" allow="rail_urban rail rail_electric rail_fast" width="3.65"/>
+    <type id="restricted" priority="0" speed="13.89" disallow="all" width="3.65"/>
+    <type id="roadWorks" priority="0" speed="1.39" allow="authority" width="3.65"/>
+    <type id="shoulder" priority="0" speed="1.39" disallow="all" discard="0" width="1.00"/>
+    <type id="special1" priority="1" speed="22.22" allow="custom1" discard="0" width="3.65"/>
+    <type id="special2" priority="1" speed="22.22" allow="custom2" discard="0" width="3.65"/>
+    <type id="special3" priority="1" speed="22.22" allow="custom1 custom2" discard="0" width="3.65"/>
+    <type id="stop" priority="1" speed="13.89" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" width="3.65"/>
+    <type id="tram" priority="2" speed="13.89" allow="tram" width="3.65"/>
+
+    <edge id=":0.begin_0" function="internal">
+        <lane id=":0.begin_0_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="3.82" length="5.11" width="3.50" shape="-0.02,1.75 -1.32,0.86 -1.75,-0.02 -1.30,-0.89 0.02,-1.75"/>
+    </edge>
+    <edge id=":0.end_0" function="internal">
+        <lane id=":0.end_0_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="3.82" length="5.11" width="3.50" shape="281.65,1.06 282.95,1.95 283.38,2.83 282.93,3.70 281.61,4.56"/>
+    </edge>
+
+    <edge id="E" from="0.begin" to="0.end" priority="1" type="driving">
+        <lane id="E_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="17.88" length="281.64" width="3.50" shape="0.02,-1.75 281.65,1.06" type="driving"/>
+    </edge>
+    <edge id="W" from="0.end" to="0.begin" priority="1" type="driving">
+        <lane id="W_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="17.88" length="281.64" width="3.50" shape="281.61,4.56 -0.02,1.75" type="driving"/>
+    </edge>
+
+    <junction id="0.begin" type="priority" x="0.00" y="0.00" incLanes="W_0" intLanes=":0.begin_0_0" shape="0.00,0.00 -0.03,3.50 0.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="0.end" type="priority" x="281.63" y="2.81" incLanes="E_0" intLanes=":0.end_0_0" shape="281.63,2.81 281.66,-0.69 281.63,2.81">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="E" to="W" fromLane="0" toLane="0" via=":0.end_0_0" dir="t" state="M"/>
+    <connection from="W" to="E" fromLane="0" toLane="0" via=":0.begin_0_0" dir="t" state="M"/>
+
+    <connection from=":0.begin_0" to="E" fromLane="0" toLane="0" dir="t" state="M"/>
+    <connection from=":0.end_0" to="W" fromLane="0" toLane="0" dir="t" state="M"/>
+
+</net>
